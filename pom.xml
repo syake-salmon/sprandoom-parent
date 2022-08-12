@@ -16,6 +16,14 @@
     <webdriver.chrome.driver>C:/webdriver/chrome/104.0.5112.79/chromedriver.exe</webdriver.chrome.driver>
   </properties>
 
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub OWNER Apache Maven Packages</name>
+      <url>https://maven.pkg.github.com/syake-salmon/sprandoom-parent</url>
+    </repository>
+  </distributionManagement>
+
   <repositories>
     <repository>
       <id>jboss-public-maven-repository</id>
@@ -44,17 +52,6 @@
         <updatePolicy>never</updatePolicy>
       </snapshots>
       <layout>default</layout>
-    </repository>
-    <repository>
-      <id>github</id>
-      <name>GitHub OWNER Apache Maven Packages</name>
-      <url>https://maven.pkg.github.com/syake-salmon/sprandoom-parent</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
     </repository>
   </repositories>
 
