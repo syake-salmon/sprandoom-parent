@@ -14,6 +14,14 @@
     <skip.ut>false</skip.ut>
     <skip.it>false</skip.it>
     <skip.analyze>false</skip.analyze>
+    <sonar.projectKey>syake-salmon_${project.artifactId}</sonar.projectKey>
+    <sonar.organization>syake-salmon</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    <sonar.sourceEncoding>${project.build.sourceEncoding}</sonar.sourceEncoding>
+    <sonar.java.binaries>${project.build.outputDirectory}</sonar.java.binaries>
+    <sonar.java.test.binaries>${project.build.directory}/test-classes</sonar.java.test.binaries>
+    <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/site/jacoco/jacoco-ut/jacoco.xml,${project.build.directory}/site/jacoco/jacoco-it/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+    <sonar.junit.reportPaths>${project.build.directory}/surefire-reports,${project.build.directory}/failsafe-reports</sonar.junit.reportPaths>
   </properties>
 
   <distributionManagement>
