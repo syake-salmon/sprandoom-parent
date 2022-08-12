@@ -297,15 +297,6 @@
             </execution>
           </executions>
         </plugin>
-        <!-- Analyze with Sonarcloud -->
-        <plugin>
-          <groupId>org.sonarsource.scanner.maven</groupId>
-          <artifactId>sonar-maven-plugin</artifactId>
-          <version>3.9.1.2184</version>
-          <configuration>
-            <sonar.skip>${skip.analyze}</sonar.skip>
-          </configuration>
-        </plugin>
         <!-- Packaging WAR -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
