@@ -19,6 +19,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn --batch-mode clean deploy --file pom.xml --settings .github/workflows/settings.xml
-      env: 
-        MVN_AUTH_TOKEN: ${{ env.GITHUB_TOKEN }}
+      run: mvn --batch-mode clean deploy --file pom.xml --settings .github/workflows/deploy_settings.xml
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
