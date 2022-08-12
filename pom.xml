@@ -13,7 +13,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <skip.ut>false</skip.ut>
     <skip.it>false</skip.it>
-    <webdriver.chrome.driver>C:/webdriver/chrome/104.0.5112.79/chromedriver.exe</webdriver.chrome.driver>
+    <skip.analyze>false</skip.analyze>
   </properties>
 
   <distributionManagement>
@@ -296,6 +296,15 @@
               </configuration>
             </execution>
           </executions>
+        </plugin>
+        <!-- Analyze with Sonarcloud -->
+        <plugin>
+          <groupId>org.sonarsource.scanner.maven</groupId>
+          <artifactId>sonar-maven-plugin</artifactId>
+          <version>3.9.1.2184</version>
+          <configuration>
+            <sonar.skip>${skip.analyze}</sonar.skip>
+          </configuration>
         </plugin>
         <!-- Packaging WAR -->
         <plugin>
