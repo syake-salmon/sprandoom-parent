@@ -2,9 +2,7 @@ name: Deploy package to GitHub Packages
 
 on:
   push:
-    branches: [ "develop-*" ]
-  pull_request:
-    branches: [ "develop-*" ]
+    branches: [ "main", "develop-*" ]
 
 jobs:
   deploy:
